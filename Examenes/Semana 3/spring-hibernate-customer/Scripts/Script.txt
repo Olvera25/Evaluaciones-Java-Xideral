@@ -1,0 +1,24 @@
+//Scripts 
+CREATE USER 'UniAdmin'@'localhost' IDENTIFIED BY 'UniAdmin';
+
+GRANT ALL PRIVILEGES ON * . * TO 'UniAdmin'@'localhost'; 
+
+
+create database Nomina;
+use Nomina;
+create table Profesor(
+id int not null auto_increment,
+nombre varchar(45) not null,
+apellido varchar (45) not null,
+email varchar (45) not null,
+especialidad varchar (45) not null,
+PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+
+insert into Profesor values (DEFAULT,"Uriel","Olvera","urie@gmail.com","Matematicas"),
+(DEFAULT,"Orlando","Olvera","orlando@gmail.com","Fisica")
+,(DEFAULT,"Elizabeth","Ramirez","eli@gmail.com","Historia")
+,(DEFAULT,"Santiago","Olvera","santi@gmail.com","Quimica")
+,(DEFAULT,"Andrea","Agudo","andy@gmail.com","Etica");
+
